@@ -486,7 +486,6 @@ function ProcessRequest(reqIndex)
   global.Dispatcher.Requests_by_Stop[toID][item] = nil -- remove before merge so it's not added twice
   local loadingList = { {type=itype, name=iname, localname=localname, count=deliverySize, stacks=stacks} }
   local totalStacks = stacks
-  -- local order = {toID=toID, fromID=fromID, minTraincars=minTraincars, maxTraincars=maxTraincars, totalStacks=stacks, lockedSlots=providerData.lockedSlots, loadingList={loadingList} } -- orders as intermediate step are no longer required
   if debug_log then log("created new order "..from.." >> "..to..": "..deliverySize.." "..item.." in "..stacks.."/"..totalStacks.." stacks, min length: "..minTraincars.." max length: "..maxTraincars) end
 
   -- find possible mergable items, fluids can't be merged in a sane way
